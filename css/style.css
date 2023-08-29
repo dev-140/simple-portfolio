@@ -15,6 +15,9 @@
   transition: all 0.2s ease;
   box-sizing: border-box;
 }
+.button.col-12 {
+  width: 100% !important;
+}
 .button:hover {
   background-color: #222831;
   border: solid 2px #00ADB5;
@@ -112,8 +115,39 @@
 .contact-container {
   background-color: #222831;
   padding-top: 50px;
+  padding-bottom: 100px;
 }
 .contact-container .contact-img {
-  width: 20%;
+  width: 70%;
   height: auto;
+}
+.contact-container .input-form {
+  padding: 5px;
+  margin-top: 10px;
+}
+.contact-container .input-form .input {
+  border: solid #00ADB5 1px;
+  border-radius: 10px;
+  width: 100%;
+}
+.contact-container .button-contact {
+  width: 100%;
+  height: 20px;
+  background-color: #00ADB5;
+  padding: 20px;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #222831;
+  padding: 20px;
+}
+.footer p {
+  color: #fff;
+  margin: 0;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
