@@ -1,107 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Rox</title>
-</head>
-<body>
-    <div class="nav">
-       <div class="container d-flex flex-row justify-content-between align-items-center">
-        <h1 class="name-logo">Rox Marzan</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="icon" type="image/x-icon" href="./assets/dragon-solid.svg" />
+		<title>Rox</title>
+	</head>
+	<body>
+		<div class="nav">
+			<div
+				class="container d-flex flex-row justify-content-between align-items-center"
+			>
+				<h1 class="name-logo mb-0">Rox Marzan</h1>
 
-        <div class="nav-container d-flex flex-row col-3 justify-content-between">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">About Me</a>
-            <a href="#" class="nav-link">Contact</a>
-        </div>
-       </div>
-    </div>
+				<div
+					class="nav-container d-md-flex flex-row col-6 justify-content-between"
+				>
+					<a href="#" class="nav-link">Home</a>
+					<a href="#about" class="nav-link">About Me</a>
+					<a href="#contact" class="nav-link">Contact</a>
+					<a
+						href="#close"
+						class="nav-link close-menu-btn d-block d-md-none"
+						>Close</a
+					>
+				</div>
 
-    <div class="main d-flex align-items-center justify-content-between">
-        <div class="container d-flex align-items-center justify-content-between">
-            <div class="hero-text-container d-flex flex-column">
-                <p class="hero-text">Rox <span class="green-text">Marzan</span></p>
-                <a href="#" class="button">Show more</a>
-            </div>
-            
-            <div class="img-container">
-                <img src="./assets/Group 2373.png" alt="">
-            </div>
-        </div>
-    </div>
+				<div class="nav-menu d-block d-lg-none">
+					<img
+						src="./assets/bars-solid (2).svg"
+						alt=""
+						class="menu-btn"
+					/>
+				</div>
+			</div>
+		</div>
 
-    <div class="about-section">
-        <div class="container d-flex flex-row align-items-center justify-content-between">
-            <div class="about-continer d-flex flex-column col-6">
-                <h2 class="hero-text mb-5">About <span class="green-text">me</span></h2>
-                <p class="normal-text">Lorem, ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi rem ratione commodi maiores repellat eum voluptatum culpa atque. Ducimus a nisi sunt, nihil totam perspiciatis aperiam facilis ad amet doloribus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. A incidunt cum animi beatae nisi tempora reiciendis assumenda sapiente perferendis excepturi quisquam officiis exercitationem ea, odit reprehenderit eos ratione hic possimus.  adipisicing elit. Repellat quia ad at excepturi quas atque itaque, debitis alias possimus voluptatibus, voluptatum recusandae deleniti et omnis, culpa error unde nesciunt velit!</p>
-            </div>
+		<div class="wrapper">
+			<div
+				class="main d-flex align-items-center justify-content-center flex-column item-snap"
+			>
+				<div
+					class="container d-flex align-items-center justify-content-between flex-column flex-md-row"
+				>
+					<div
+						class="hero-text-container d-flex flex-column align-items-center align-items-md-start"
+					>
+						<p class="hero-text text-center">
+							Rox <span class="green-text">Marzan</span>
+						</p>
+						<a href="#" class="button">Show more</a>
+					</div>
 
-            <div class="img-container col-5">
-                <img src="./assets/Group 2374.png" alt="">
-            </div>
-        </div>
-    </div>
+					<div
+						class="img-container col-6 mt-5 col-md-6 col-lg-5 mt-md-0"
+					>
+						<img src="./assets/Group 2373.png" alt="" />
+					</div>
+				</div>
+				<div id="about"></div>
+			</div>
 
-    <div class="works-container">
-        <div class="container-bg d-flex align-items-center justify-content-center">
-            <div class="container d-flex flex-column align-items-center col-12">
-                <h2 class="hero-text mb-5">My <span class="green-text">Works</span></h2>
+			<div class="item-snap">
+				<div class="about-section">
+					<div
+						class="container d-flex flex-row align-items-center justify-content-between flex-column flex-md-row"
+					>
+						<div
+							class="about-continer d-flex flex-column col-12 col-md-6"
+						>
+							<h2 class="hero-text mb-5">
+								About <span class="green-text">me</span>
+							</h2>
+							<p class="normal-text">
+								About Me Hi there! My name is Rox Marzan, and
+								I'm a 19-year-old currently studying at the
+								Technological Institute of the Philippines. I'm
+								in my 2nd year of the Bachelor of Science in
+								Computer Science program. Ever since I started
+								my journey in the world of programming, I've
+								been fascinated by web development. My goal is
+								to become a skilled full-stack web developer and
+								create amazing digital experiences for users. I
+								have experience in a wide range of technologies
+								that power modern web development.
+							</p>
+						</div>
 
-                <div class="d-flex col-12 align-items-center justify-content-center">
-                    <div class="work-card d-flex flex-column align-items-center justify-content-between col-6">
-                        <img src="./assets/work-1.png" alt="" class="work-img">
-                        <p>Vatom</p>
-                    </div>
-    
-                    <div class="work-card d-flex flex-column align-items-center justify-content-between col-6">
-                        <img src="./assets/work-2.png" alt="" class="work-img">
-                        <p>E-tipid landing page</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+						<div
+							class="img-container-main col-9 mt-5 mt-md-0 col-md-6"
+						>
+							<img
+								src="./assets/Group 2374.png"
+								alt=""
+								class="main-img"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
 
-    <div class="contact-container">
-        <div class="container d-flex align-items-center justify-content-center">
-           <div class="d-flex flex-column mr-10">
-                <h2 class="hero-text">Contact <span class="green-text">Me</span></h2>
-                <img src="./assets/Group 2375.png" alt="" class="contact-img">
-           </div>
+			<div class="item-snap">
+				<div class="works-container">
+					<div
+						class="container-bg d-flex align-items-center justify-content-center"
+					>
+						<div
+							class="container d-flex flex-column align-items-center col-12 col-md-7"
+						>
+							<h2 class="hero-text mb-5">
+								My <span class="green-text">Works</span>
+							</h2>
 
-           <div class="form d-flex flex-column align-items-center">
-                <div class="d-flex">
-                    <div class="input-form col-6">
-                        <input type="text">
-                    </div>
-                    <div class="input-form col-6">
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="input-form col-6">
-                        <input type="text">
-                    </div>
-                    <div class="input-form col-6">
-                        <input type="text">
-                    </div>
-                </div>
+							<div
+								class="multiple-items d-flex col-12 align-items-center justify-content-center"
+							>
+								<div
+									class="work-card d-flex flex-column align-items-center justify-content-between col-6"
+								>
+									<img
+										src="./assets/work-1.png"
+										alt=""
+										class="work-img"
+									/>
+									<a
+										href="https://dev-140.github.io/vatom/#/home"
+										target="_blank"
+										>Vatom</a
+									>
+								</div>
 
-               <a href="#" class="button-contact d-flex align-items-center justify-content-center">Send Message</a>
-           </div>
-        </div>
-    </div>
+								<div
+									class="work-card d-flex flex-column align-items-center justify-content-between col-6"
+								>
+									<img
+										src="./assets/work-2.png"
+										alt=""
+										class="work-img"
+									/>
+									<a
+										href="https://dev-140.github.io/group-3/"
+										target="_blank"
+										>E-tipid landing page</a
+									>
+								</div>
 
-    <div class="footer">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illum excepturi alias nobis, laborum facere accusamus placeat sequi quasi unde nesciunt aut sint error dolorem optio perferendis. Eaque, in. Odit?</p>
-    </div>
-</body>
+								<div
+									class="work-card d-flex flex-column align-items-center justify-content-between col-6"
+								>
+									<img
+										src="./assets/4mns.png"
+										alt=""
+										class="work-img"
+									/>
+									<a
+										href="https://dev-140.github.io/four-MnS/"
+										target="_blank"
+										>4MnS</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="contact"></div>
+
+			<div class="item-snap">
+				<div
+					class="contact-container d-flex align-items-center justify-content-center"
+				>
+					<div
+						class="container d-flex align-items-center justify-content-center flex-column flex-md-row"
+					>
+						<div
+							class="d-flex flex-column mr-10 align-items-center mr-0 mr-md-5"
+						>
+							<h2 class="hero-text">
+								Contact <span class="green-text">Me</span>
+							</h2>
+							<img
+								src="./assets/Group 2375.png"
+								alt=""
+								class="contact-img"
+							/>
+						</div>
+
+						<div
+							class="form d-flex flex-column align-items-center col-12 col-md-6 mt-5 mt-md-0"
+						>
+							<div class="d-flex col-12 flex-column flex-md-row">
+								<div class="input-form col-12 col-md-6">
+									<input
+										type="text"
+										id="fisrtName"
+										placeholder="First Name:"
+									/>
+								</div>
+								<div class="input-form col-12 col-md-6">
+									<input
+										type="text"
+										id="lastName"
+										placeholder="Last Name:"
+									/>
+								</div>
+							</div>
+							<div class="d-flex col-12 flex-column flex-md-row">
+								<div class="input-form col-12 col-md-12">
+									<input
+										type="text"
+										placeholder="Email:"
+										id="email"
+									/>
+								</div>
+							</div>
+							<div class="d-flex col-12 flex-column flex-md-row">
+								<div
+									class="input-form-message col-12 col-md-12"
+								>
+									<textarea
+										id="message"
+										placeholder="Describe yourself here..."
+									></textarea>
+								</div>
+							</div>
+
+							<button
+								id="sendEmailButton"
+								class="button-contact d-flex align-items-center justify-content-center"
+							>
+								Send Message
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="email-modal d-flex align-items-center justify-content-center none"
+		>
+			<div class="col-6">
+				<div class="text-center">Your email sent successfully</div>
+			</div>
+		</div>
+		<div
+			class="email-modal-err d-flex align-items-center justify-content-center d-none"
+		>
+			<div class="col-6">
+				<div class="text-center">Please Complete the form</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>&copy; 2023 Rox Marzan. All rights reserved.</p>
+		</div>
+
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script src="./js/app.js"></script>
+	</body>
 </html>

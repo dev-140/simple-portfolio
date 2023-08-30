@@ -1,12 +1,23 @@
 * {
   font-family: "Poppins", sans-serif;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .button {
   padding: 12px;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #00ADB5;
+  background-color: #00adb5;
   color: #fff;
   font-weight: bold;
   font-size: 20px;
@@ -20,7 +31,7 @@
 }
 .button:hover {
   background-color: #222831;
-  border: solid 2px #00ADB5;
+  border: solid 2px #00adb5;
   padding: 10px;
 }
 
@@ -28,8 +39,13 @@
   color: #fff;
   font-size: 60px;
 }
+@media (max-width: 992px) {
+  .hero-text {
+    font-size: 30px;
+  }
+}
 .hero-text .green-text {
-  color: #00ADB5;
+  color: #00adb5;
 }
 
 .nav {
@@ -39,19 +55,41 @@
   width: 100%;
   z-index: 99;
 }
+.nav .nav-menu {
+  height: 30px;
+  width: 30px;
+  filter: invert(69%) sepia(60%) saturate(5713%) hue-rotate(146deg) brightness(91%) contrast(101%);
+}
 .nav .name-logo {
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
 }
-.nav .nav-link {
+@media (max-width: 992px) {
+  .nav .nav-container {
+    position: fixed;
+    right: -100vw;
+  }
+  .nav .nav-container.active {
+    width: 50vw;
+    position: fixed;
+    z-index: 999;
+    background-color: #00adb5;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    padding-top: 50px;
+    transition: all 0.5s ease;
+  }
+}
+.nav .nav-container .nav-link {
   color: #ffffff;
   font-size: 14px;
   font-weight: 200;
   transition: all 0.5s;
 }
-.nav .nav-link:hover {
-  background-color: #00ADB5;
+.nav .nav-container .nav-link:hover {
+  background-color: #00adb5;
   padding: 10px;
   border-radius: 11px;
 }
@@ -78,44 +116,61 @@
   font-size: 20px;
   font-weight: 300;
 }
+@media (max-width: 992px) {
+  .about-section .normal-text {
+    font-size: 15px;
+  }
+}
+.about-section .main-img {
+  width: 100%;
+  height: auto;
+}
 
 .works-container {
-  background-color: #282d37;
-  background-image: url(../assets/pexels-roberto-nickson-3082341.jpg);
-  opacity: 0.75;
-  height: 1000px;
+  background-image: url(../assets/Projects-page.svg);
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 .works-container .container-bg {
   height: 100%;
   width: 100%;
-  background-color: rgba(34, 40, 49, 0.8235294118);
 }
 .works-container .work-card {
   width: 50%;
   height: 100%;
-  background-color: #00ADB5;
+  background-color: rgba(162, 193, 195, 0.1254901961);
   padding: 10px;
   border-radius: 11px;
-  transition: all 0.5s ease-in-out;
-}
-.works-container .work-card:first-child {
-  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  cursor: pointer;
+  margin-left: 10px;
 }
 .works-container .work-card .work-img {
   height: auto;
   width: 100%;
   border-radius: 10px;
 }
+.works-container .work-card a {
+  margin-top: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.works-container .work-card:hover {
+  opacity: 0.5;
+}
 
 .contact-container {
   background-color: #222831;
   padding-top: 50px;
   padding-bottom: 100px;
+  height: 100vh;
 }
 .contact-container .contact-img {
   width: 70%;
@@ -124,22 +179,58 @@
 .contact-container .input-form {
   padding: 5px;
   margin-top: 10px;
+  height: 40px;
 }
-.contact-container .input-form .input {
-  border: solid #00ADB5 1px;
+.contact-container .input-form input {
+  border: solid #00adb5 1px;
   border-radius: 10px;
   width: 100%;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  padding: 3px;
+}
+.contact-container .input-form input:active {
+  outline: none;
+}
+.contact-container .input-form input:focus {
+  outline: none;
+}
+.contact-container .input-form-message {
+  height: 150px;
+  padding: 5px;
+  margin-top: 10px;
+}
+.contact-container .input-form-message textarea {
+  width: 100%;
+  height: 100% !important;
+  border: solid #00adb5 1px;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  padding: 3px;
+}
+.contact-container .input-form-message textarea:active {
+  outline: none;
+}
+.contact-container .input-form-message textarea:focus {
+  outline: none;
 }
 .contact-container .button-contact {
   width: 100%;
   height: 20px;
-  background-color: #00ADB5;
+  background-color: #00adb5;
   padding: 20px;
   margin-top: 10px;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
   border-radius: 10px;
+  border: none;
 }
 
 .footer {
@@ -150,4 +241,96 @@
   color: #fff;
   margin: 0;
   text-align: center;
+}
+
+.multiple-items {
+  position: relative;
+}
+.multiple-items .slick-arrow {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  background-image: url(../assets/arrow-right-solid.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: invert(69%) sepia(60%) saturate(5713%) hue-rotate(146deg) brightness(91%) contrast(101%);
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 20px;
+  width: 40px;
+  cursor: pointer;
+}
+.multiple-items .slick-arrow.slick-disabled {
+  filter: none;
+}
+.multiple-items .slick-arrow.slick-prev {
+  transform: rotate(180deg);
+  margin-right: 3px;
+}
+.multiple-items .slick-dots {
+  position: absolute;
+  bottom: -50px;
+  display: flex;
+  padding: 0;
+}
+.multiple-items .slick-dots li {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #00adb5;
+  list-style-type: none;
+  border-radius: 100px;
+  margin: 5px;
+  box-sizing: border-box;
+  padding: 3px;
+}
+.multiple-items .slick-dots .slick-active {
+  background-color: #00adb5;
+}
+.multiple-items .slick-dots button {
+  display: none;
+}
+
+.email-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 172, 181, 0.5725490196);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 1s ease;
+}
+.email-modal .text-center {
+  color: #fff;
+  font-size: 20px;
+  background-color: #222831;
+  padding: 10px;
+  border-radius: 10px;
+}
+.email-modal.none {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  top: -99999999px;
+}
+
+.email-modal-err {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 1s ease;
+}
+.email-modal-err .text-center {
+  color: #fff;
+  font-size: 1rem;
+  background-color: #222831;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 3px #b50000;
 }/*# sourceMappingURL=style.css.map */
